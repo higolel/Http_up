@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<launch>
+	<param name="url" type="string" value="http://49.233.203.21:18000/pic/" />
+	<!--
+	<node pkg="http_up" type="http_up_node" name="http_up_node" />
+	-->
+	<node pkg="http_up" type="http_up_node" name="http_up_node" output="screen" />
+
+</launch>
