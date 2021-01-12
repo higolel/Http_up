@@ -27,6 +27,8 @@ struct Face_pic
 	std::string vin;
 	std::string deviceId;
 	int pictureType;
+	double lon;
+	double lat;
 	int sex;
 	int age;
 	int facialExpression;
@@ -45,6 +47,8 @@ struct License_plate_pic
 	std::string vin;
 	std::string deviceId;
 	int pictureType;
+	double lon;
+	double lat;
 	std::string licenseNum;
 	int plateColor;
 	int carColor;

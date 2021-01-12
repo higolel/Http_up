@@ -12,6 +12,8 @@ void Face_struct_assignment(Face_pic &face_msg, const face_plate_msgs::Face_pic:
 	face_msg.deviceId = msg->deviceId;
 	face_msg.pictureType = msg->pictureType;
 	face_msg.sex = msg->sex;
+	face_msg.lon = msg->lon;
+	face_msg.lat = msg->lat;
 	face_msg.age = msg->age;
 	face_msg.facialExpression = msg->facialExpression;
 	face_msg.race = msg->race;
@@ -58,6 +60,8 @@ void Plate_struct_assignment(License_plate_pic &plate_msg, const face_plate_msgs
 	plate_msg.vin = msg->vin;
 	plate_msg.deviceId = msg->deviceId;
 	plate_msg.pictureType = msg->pictureType;
+	plate_msg.lon = msg->lon;
+	plate_msg.lat = msg->lat;
 	plate_msg.licenseNum = msg->licenseNum;
 	plate_msg.plateColor = msg->plateColor;
 	plate_msg.carColor = msg->carColor;
@@ -138,6 +142,8 @@ void to_json(json &j, const Face_pic &face_msg)
 		{"vin", face_msg.vin},
 		{"deviceId", face_msg.deviceId},
 		{"pictureType", face_msg.pictureType},
+		{"lon", face_msg.lon},
+		{"lat", face_msg.lat},
 		{"sex", face_msg.sex},
 		{"age", face_msg.age},
 		{"facialExpression", face_msg.facialExpression},
@@ -191,6 +197,8 @@ void to_json(json &j, const License_plate_pic &plate_msg)
 		{"vin", plate_msg.vin},
 		{"deviceId", plate_msg.deviceId},
 		{"pictureType", plate_msg.pictureType},
+		{"lon", plate_msg.lon},
+		{"lat", plate_msg.lat},
 		{"licenseNum", plate_msg.licenseNum},
 		{"plateColor", plate_msg.plateColor},
 		{"carColor", plate_msg.carColor},
